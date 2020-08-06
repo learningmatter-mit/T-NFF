@@ -3,7 +3,7 @@
 Implementation of the temperature transferable neural force field from our paper https://arxiv.org/abs/2007.14144
 
 <p align="center">
-  <img src="images/tnff.png" width="650">
+  <img src="images/tnff.jpg" width="500">
 </p>
 
 The model is based on SchNet [1-4]. It provides an interface to train and evaluate neural networks for force fields, specifically tested on coarse-grained ionic liquid simulations
