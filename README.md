@@ -25,13 +25,13 @@ conda upgrade conda
 conda create -n nff python=3.7 scikit-learn pytorch\>=1.2.0 cudatoolkit=10.0 ase pandas pymatgen sympy -c pytorch -c conda-forge
 ```
 
-You need to activate the `nff` environment to install the NFF package:
+You need to activate the `tnff` environment to install the NFF package:
 
 ```bash
-conda activate nff
+conda activate tnff
 ```
 
-Finally, install the `nff` package by running:
+Finally, install the `tnff` package by running:
 
 ```bash
 pip install .
@@ -41,7 +41,7 @@ pip install .
 
 ### Usage with Jupyter Notebooks and other scripts
 
-A series of tutorials illustrating how `nff` can be used in conjunction with Jupyter Notebooks or other scripts is provided in the `examples/` folder. Furthermore, it includes the necessary 
+A series of tutorials illustrating how `tnff` can be used in conjunction with Jupyter Notebooks, as well as generating the coarse-grained mapping, as well as generating the pickle data file for further use. 
 
 
 ## References
