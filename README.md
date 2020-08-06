@@ -1,6 +1,23 @@
-# Neural Force Field
+# Temperature transferable Neural Force Field (TNFF) for coarse-grained molecular dynamics simulations
 
-The Neural Force Field (NFF) code is an API based on SchNet [1-4]. It provides an interface to train and evaluate neural networks for force fields.
+Implementation of the temperature transferable neural force field from our paper https://arxiv.org/abs/2007.14144
+
+<p align="center">
+  <img src="images/tnff.png" width="650">
+</p>
+
+The model is based on SchNet [1-4]. It provides an interface to train and evaluate neural networks for force fields, specifically tested on coarse-grained ionic liquid simulations
+
+## Usage
+
+Three notebooks run through the workflow of the paper
+
+ - Part1_cg_mapping.ipynb
+  Uses [coarse-grained auto-encoders](https://github.com/learningmatter-mit/Coarse-Graining-Auto-encoders) for determening the best mapping for the ionic liquid. Uses MD data from LAMMPS with a [force field for ionic liquids](https://github.com/agiliopadua/ilff).
+ - Part2_data_file_creation.ipynb
+  Using the previously mentioned data and the newly generated coarse-grained mapping preparing the data for training, applying the coarse-grained filter for the training data.
+ - Part3_temp_transfer.ipynb
+  Training the model and running MD simulations on ASE. The hyperparameters in the model are the ones from the best run, though the data is not the full dataset.
 
 ## Installation from source
 
@@ -18,32 +35,17 @@ conda upgrade conda
 conda create -n nff python=3.7 scikit-learn pytorch>=1.2.0 cudatoolkit=10.0 ase pandas pymatgen -c pytorch -c conda-forge
 ```
 
-You need to activate the `nff` environment to install the NFF package:
+You need to activate the `tnff` environment to install the NFF package:
 
 ```bash
 conda activate nff
 ```
 
-Finally, install the `nff` package by running:
+Finally, install the `tnff` package by running:
 
 ```bash
 pip install .
 ```
-
-## Usage
-
-### Command line
-The simplest way to use the `nff` package is to use the premade scripts (in the `scripts`) folder. As an example, to train a SchNet model with the default parameters using the example dataset (ethanol geometries) from the command line, run the command
-
-```bash
-nff_train.py train schnet tutorials/data/dataset.pth.tar $HOME/train_model --device cuda:0
-```
-
-This will use 60% of the dataset for training, 20% for validation and 20% for testing. The training will happen on the device `cuda:0`. Results of training, checkpoints and hyperparameters will be saved on the path `$HOME/train_model`.
-
-### Usage with Jupyter Notebooks and other scripts
-
-A series of tutorials illustrating how `nff` can be used in conjunction with Jupyter Notebooks or other scripts is provided in the `tutorials/` folder. It also covers how to integrate a pre-trained model with an ASE calculator.
 
 
 ## References
