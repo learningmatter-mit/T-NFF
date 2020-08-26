@@ -17,7 +17,7 @@ Three notebooks run through the workflow of the paper
  - Part2_data_file_creation.ipynb
   Using the previously mentioned data and the newly generated coarse-grained mapping preparing the data for training, applying the coarse-grained filter for the training data.
  - Part3_temp_transfer.ipynb
-  Training the model and running MD simulations on ASE. The hyperparameters in the model are the ones from the best run, though the data is not the full dataset.
+  Training the model and running MD simulations on ASE. The hyperparameters in the model are the ones from the best run, though the data is not the full dataset. The best model from the paper is included in the ./examples/models/ directory
 
 ## Installation from source
 
