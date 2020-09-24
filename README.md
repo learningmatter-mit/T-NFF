@@ -6,7 +6,7 @@ Implementation of the temperature transferable neural force field from our paper
   <img src="images/tnff.jpg" width="500">
 </p>
 
-The model is based on SchNet [1-4]. It provides an interface to train and evaluate neural networks for force fields, specifically tested on coarse-grained ionic liquid simulations
+The model is based on SchNet [1]. It provides an interface to train and evaluate neural networks for force fields, specifically tested on coarse-grained ionic liquid simulations. Furthermore, the work pipeline uses the coarse-graining auto-encoders for determining the statistically most viable coarse-grain mapping [2].
 
 ## Usage
 
@@ -50,19 +50,9 @@ pip install .
 
 ## References
 
-* [1] K.T. Schütt. F. Arbabzadah. S. Chmiela, K.-R. Müller, A. Tkatchenko.  
-*Quantum-chemical insights from deep tensor neural networks.*
-Nature Communications **8**. 13890 (2017)   
-[10.1038/ncomms13890](http://dx.doi.org/10.1038/ncomms13890)
-
-* [2] K.T. Schütt. P.-J. Kindermans, H. E. Sauceda, S. Chmiela, A. Tkatchenko, K.-R. Müller.  
+* [1] K.T. Schütt. P.-J. Kindermans, H. E. Sauceda, S. Chmiela, A. Tkatchenko, K.-R. Müller.  
 *SchNet: A continuous-filter convolutional neural network for modeling quantum interactions.*
 Advances in Neural Information Processing Systems 30, pp. 992-1002 (2017) [link](http://papers.nips.cc/paper/6700-schnet-a-continuous-filter-convolutional-neural-network-for-modeling-quantum-interactions)
 
-* [3] K.T. Schütt. P.-J. Kindermans, H. E. Sauceda, S. Chmiela, A. Tkatchenko, K.-R. Müller.  
-*SchNet - a deep learning architecture for molecules and materials.* 
-The Journal of Chemical Physics 148(24), 241722 (2018) [10.1063/1.5019779](https://doi.org/10.1063/1.5019779)
-
-* [4] K.T. Schütt, P. Kessel, M. Gastegger, K. Nicoli, A. Tkatchenko, K.-R. Müller.
-*SchNetPack: A Deep Learning Toolbox For Atomistic Systems.*
-J. Chem. Theory Comput. **15**(1), 448-455 (2019). [10.1021/acs.jctc.8b00908](https://doi.org/10.1021/acs.jctc.8b00908)
+* [2] Wang, W., & Gómez-Bombarelli, R.
+*Coarse-graining auto-encoders for molecular dynamics.* npj Computational Materials, 5(1), 1-9 (2019) [link](https://www.nature.com/articles/s41524-019-0261-5)
