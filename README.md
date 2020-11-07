@@ -1,6 +1,6 @@
 # Temperature transferable Neural Force Field (TNFF) for coarse-grained molecular dynamics simulations
 
-Implementation of the temperature transferable neural force field from our paper https://arxiv.org/abs/2007.14144
+Implementation of the temperature transferable neural force field from our paper https://doi.org/10.1063/5.0022431
 
 <p align="center">
   <img src="images/tnff.jpg" width="500">
