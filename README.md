@@ -13,7 +13,7 @@ The model is based on SchNet [1]. It provides an interface to train and evaluate
 Three notebooks run through the workflow of the paper
 
  - Part1_cg_mapping.ipynb
-  Uses [coarse-grained auto-encoders](https://github.com/learningmatter-mit/Coarse-Graining-Auto-encoders) for determening the best mapping for the ionic liquid. Uses MD data from LAMMPS with a [force field for ionic liquids](https://github.com/agiliopadua/ilff).
+  Uses [coarse-grained auto-encoders](https://github.com/learningmatter-mit/Coarse-Graining-Auto-encoders) for determening the best mapping for the ionic liquid. Uses MD data from LAMMPS with a [force field for ionic liquids](https://github.com/agiliopadua/ilff). The full data set used for training can be found [3]
  - Part2_data_file_creation.ipynb
   Using the previously mentioned data and the newly generated coarse-grained mapping preparing the data for training, applying the coarse-grained filter for the training data.
  - Part3_temp_transfer.ipynb
@@ -56,3 +56,5 @@ Advances in Neural Information Processing Systems 30, pp. 992-1002 (2017) [link]
 
 * [2] Wang, W., & Gómez-Bombarelli, R.
 *Coarse-graining auto-encoders for molecular dynamics.* npj Computational Materials, 5(1), 1-9 (2019) [link](https://www.nature.com/articles/s41524-019-0261-5)
+
+* [3] Ruza, Jurgis (2021): MD simulation data for training the T-NFF model. figshare. Dataset. https://doi.org/10.6084/m9.figshare.12967217.v1 
